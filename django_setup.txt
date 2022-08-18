@@ -1,0 +1,40 @@
+This file outlines the steps in which to succesfully install the
+django backend and how to fetch from it from your react app
+
+1. install python:
+    if you already have python installed you can skip this step if not
+    go to this link: https://www.python.org/downloads/
+    make sure that while installing it you click the option to add to PATH
+    if your done move to the next step
+
+2. install venv:
+    after you have installed python you should open your command prompt and 'cd' into the Meetra directory 
+    then you should run this command 'py -m venv venv' and wait NOTE:IF YOU ENCOUNTER ANY PROBLEMS CONSULT ME,
+    this should install a virtualenv in the meetra root directory so your file structure should look like:
+    Meetra:
+        - meetra_backend
+        - meetra_frontend
+        - venv <= this is what u just installed
+        - etc.
+    once you have successfully installed your venv move to the next step
+
+3. install django and required modules:
+    in this section after you have successfully installed your venv you should run this command in
+    your command prompt NOTE: MAKE SURE YOUR IN THE MEETRA ROOT DIRECTORY, 'venv\Scripts\activate'
+    notice the backwards slash used. after you have done so you should see a
+    '(venv) C:\{ your path }\Meetra>' after this you should run the following command
+
+    'pip install -r requirements.txt' and wait till the process has finished
+
+4. Running the Django development server:
+    after you have completed step 3 you should run this command in your terminal
+    'cd meetra_backend' => this enters the django folder
+    'py manage.py runserver' => this starts the django development server in the link: http://127.0.0.1:8000/
+
+5. Making API calls to the django server:
+    first of al you should navigate to the link: http://127.0.0.1:8000/api/ to see the django_rest_api links and 
+    their general overview. So if you want to make an api call you will reference
+      http://127.0.0.1:8000/api/ append the end with whatever link u want to make the call to.
+
+
+if there is any need for clarification or your facing issues contact me
