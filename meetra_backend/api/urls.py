@@ -1,5 +1,7 @@
 from django.urls import path
 
-# urlpatterns = [
-    
-# ]
+from api.views import ApiEndpointsView
+
+urlpatterns = [
+    path('', ApiEndpointsView, name="api-endpoints"),
+]

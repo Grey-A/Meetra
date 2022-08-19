@@ -1,4 +1,5 @@
 # Django
 venv/
 meetra_frontend/node_modules/
-meetra_backend/__pycache__/
+meetra_backend/api/__pycache__
+meetra_backend/meetra_backend/__pycache__
