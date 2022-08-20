@@ -1,0 +1,5 @@
+This file contains all the api endpoints, the request method they accept and what they do
+
+1. https://128.0.0.1/api/ [GET]:
+    
+    This returns the available list of api_endpoints so just like this file except online
