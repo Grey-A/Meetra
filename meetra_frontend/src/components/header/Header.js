@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/esm/Button';
 import Hero from '../Hero/Hero';
 
-function AutoLayoutVariableExample() {
+function Header() {
   return (
     <Container fluid style={{padding: '0 0 3rem 0'}}>
       <Row className="align-items-center  mx-auto" style={{marginTop: '2rem'}}>
@@ -27,4 +27,4 @@ function AutoLayoutVariableExample() {
   );
 }
 
-export default AutoLayoutVariableExample;  
+export default Header;  
