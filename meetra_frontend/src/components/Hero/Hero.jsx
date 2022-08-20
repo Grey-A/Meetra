@@ -1,8 +1,8 @@
 import React from 'react'
-import Img1 from '../../asset/Meetra-20220820T114304Z-001/Meetra/user1.jpg'
-import Img2 from '../../asset/Meetra-20220820T114304Z-001/Meetra/user2.jpg'
-import Img3 from '../../asset/Meetra-20220820T114304Z-001/Meetra/user3.jpg'
-import Img4 from '../../asset/Meetra-20220820T114304Z-001/Meetra/user4.jpg'
+import Img1 from '../../asset/user1.jpg'
+import Img2 from '../../asset/user2.jpg'
+import Img3 from '../../asset/user3.jpg'
+import Img4 from '../../asset/user4.jpg'
 
 const data = [
   {
