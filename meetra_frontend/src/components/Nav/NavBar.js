@@ -6,10 +6,10 @@ import '../../index.css'
 
 function NavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="white" variant="white" className='border-bottom' >
+    <Navbar collapseOnSelect expand="lg" bg="white" variant="white" className='border-bottom sticky-top' >
       <Container fluid>
         <Navbar.Brand href="/" className='navbar-brand'>
-          MEET<span style={{fontWeight: 'bold'}}>RA</span>
+          Meet<span style={{fontWeight: 'bold'}}>ra</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         

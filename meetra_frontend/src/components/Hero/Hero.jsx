@@ -8,33 +8,37 @@ const data = [
   {
     id: 1,
     image: Img1,
-    title: 'Users Photo'
+    title: 'Users Photo',
+    classes: 'border-radius-r'
   },
   {
     id: 2,
     image: Img2,
-    title: 'Users Photo'
+    title: 'Users Photo',
+    classes: 'border-radius-l'
   },
   {
     id: 3,
     image: Img3,
-    title: 'Users Photo'
+    title: 'Users Photo',
+    classes: 'border-radius-r'
   },
   {
     id: 4,
     image: Img4,
-    title: 'Users Photo'
+    title: 'Users Photo',
+    classes: 'border-radius-l'
   },
 ]
 
 const Hero = () => {
   return (
     <div fluid align-items-center className='hero-container'>
-      {data.map(({id, image, title}) => {
+      {data.map(({id, image, title, classes}) => {
         return (
-          <div class="hero-item" key={id}>
+          <div className={`hero-item ${classes}`} key={id}>
             <div className="hero-image">
-              <img src={image} alt={title} />
+              <img src={image} alt={title} className={classes} />
             </div>
           </div>
         )

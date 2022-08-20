@@ -2,12 +2,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/esm/Button';
-import Card from 'react-bootstrap/Card';  
 import Hero from '../Hero/Hero';
 
 function AutoLayoutVariableExample() {
   return (
-    <Container fluid>
+    <Container fluid style={{padding: '0 0 3rem 0'}}>
       <Row className="align-items-center  mx-auto" style={{marginTop: '2rem'}}>
         <Col mb-6 sm='11.5' md="6" lg="6" >
           <h1 style={{ fontSize: '3rem'}}>Fast, reliable and <span style={{color: "rgb(255, 165, 82"}}>secure</span> Conferencing</h1>
