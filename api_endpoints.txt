@@ -3,3 +3,8 @@ This file contains all the api endpoints, the request method they accept and wha
 1. https://128.0.0.1/api/ [GET]:
     
     This returns the available list of api_endpoints so just like this file except online
+
+2. https://128.0.0.1/api/user/register [POST]:
+
+    This registers a new user(sign up), you send the username, full_name, email and password if user
+    has been successfully created you will get a response that states "user has been created".
