@@ -6,16 +6,12 @@ import NavBar from './components/Nav/NavBar'
 export default function App() {
   return (
     <>
-      <div className="wrapper">
-       <Router>
-        <NavBar sticky="top" />
-        <Header />
-
+      <NavBar sticky="top" />       
+      <Router>
         <Routes>
-          <Route path='/' element={<Header />} />
+          <Route exact path='/' element={<Header />} />
         </Routes>
       </Router>
-      </div>
     </>
   )
 }

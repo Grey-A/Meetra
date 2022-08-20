@@ -3,6 +3,17 @@
   --primary-1: #b97676;
 }
 
+p {
+  font-size: 1.1rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+  'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'PT Sans', sans-serif
+}
+
+
 .btn {
   display: inline-block;
   padding: 8px 20px;
@@ -11,14 +22,15 @@
   border: none;
   cursor: pointer;
   width: fit-content;
+  margin: .3rem auto;
 }
 
 .btn--primary{
   display: inline-block;
-  background: var(--primary-1);
+  background: var(--primary);
   color: #fff;
   border: 1px solid var(--primary);
-  border-radius: .5rem;
+  border-radius: .3rem;
   width: fit-content;
 }
 
@@ -118,6 +130,38 @@
   box-shadow: none;
 }
 
+/* Hero Section */
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .1rem;
+}
+
+.hero-item {
+  padding: .4rem;
+  border: none;
+  width: 100%;
+}
+
+.hero-image {
+  border-radius: .6rem 4rem .3rem 4rem;
+  overflow: hidden;
+  transition: transform .5s;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 15rem;
+  border-radius: .3rem 1rem .3rem 4rem;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.hero-image:hover{
+  transform: translateY(7px);
+}
+
+/* *********** MEDIA QUERIES (MEDIUM DEVICES) *********** */
 @media screen and (max-width: 990px) {
 
   .ms-auto {
@@ -133,7 +177,7 @@
   }
 
   .my-auto {
-    margin: 0.5rem auto;
+    margin: 0.2rem auto;
     align-items: center;
     width: 80%;
     border-radius: .5rem;
@@ -163,5 +207,27 @@
 
   .btn--outline, .btn--primary {
     min-width: 20rem;
+  }
+  
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bottom {
+    margin-bottom: 3rem;
+  }
+  
+  .text-center-sm {
+    text-align: start;
+  }
+  
+}
+
+/* *********** MEDIA QUERIES (SMALL DEVICES) *********** */
+@media screen and (max-width: 700px) {
+  .text-center-sm {
+    text-align: center;
   }
 }

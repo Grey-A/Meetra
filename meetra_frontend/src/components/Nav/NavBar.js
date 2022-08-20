@@ -24,7 +24,7 @@ function NavBar() {
               <Button className='btn btn--outline ms-3' >Login</Button>
             </Nav.Link>
             <Nav.Link href="/sign-up">
-              <Button variant="dark" eventKey={2} className='btn btn--primary ms-3'>  Sign Up </Button>
+              <Button variant="dark" className='btn btn--primary ms-3'>  Sign Up </Button>
             </Nav.Link>    
           </Nav>
         </Navbar.Collapse>
