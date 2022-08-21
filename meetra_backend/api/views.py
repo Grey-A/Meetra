@@ -13,5 +13,7 @@ def ApiEndpointsView(request):
         "api/user/token": "This accepts the users email and pasword then returns a jwt [refresh and access]token",
         "api/user/token/refresh": "This accepts the users refresh token if the access token is expired and returns a new access token",
         "api/user/token/blacklist": "This blacklists the users tokens which is equivalent to logging them out NOTE: make sure to remove the tokens from the users local storage",
+        "api/call/create/": "This accepts [host(user_id), channel_name(txt), scheld_time(NOTE: the format is YYYY-MM-DDThh:mm, you can ignore the seconds, e.g. 2015-10-22T18:17), and is_group which is either True or False",
+        
     }
     return Response(api_endpoints)
