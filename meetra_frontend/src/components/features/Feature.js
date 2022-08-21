@@ -5,10 +5,10 @@ import IMG from '../../asset/user5.jpg'
 
 function Feature() {
   return (
-    <Container 
-      fluid 
+    <Container
+      fluid
       id='feature' 
-      style={{ padding: '1.5rem 0 4rem 0' }}
+      style={{ padding: '1.5rem 0 4rem 0', width: '95%'}}
       className='border-bottom border-top' 
     >
       <Row 
@@ -25,15 +25,15 @@ function Feature() {
               <h3>Grow together while enjoying our cool features.</h3>
             </div>
             <div className="section-body">
-              <span className="section-id">1</span>
+              <span className="section-id sec-mr">1</span>
               <h2>Meeting Milestones - allocate times for section of your meetings.</h2>
             </div>
             <div className="section-body">
-              <span className="section-id">2</span>
+              <span className="section-id sec-mr">2</span>
               <h2>Premium Security - enjoy security while in a meeting.</h2>
             </div>
             <div className="section-body">
-              <span className="section-id">3</span>
+              <span className="section-id sec-mr">3</span>
               <h2>Meeting Reminder - be reminded of your meeting at least an hour before.</h2>
             </div>
           </div>

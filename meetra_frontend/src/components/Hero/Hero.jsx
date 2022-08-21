@@ -21,19 +21,19 @@ const data = [
     id: 3,
     image: Img3,
     title: 'Users Photo',
-    classes: 'border-radius-r'
+    classes: 'border-radius-l'
   },
   {
     id: 4,
     image: Img4,
     title: 'Users Photo',
-    classes: 'border-radius-l'
+    classes: 'border-radius-r'
   },
 ]
 
 const Hero = () => {
   return (
-    <div fluid align-items-center className='hero-container'>
+    <div align-items-center className='hero-container'>
       {data.map(({id, image, title, classes}) => {
         return (
           <div className={`hero-item ${classes}`} key={id}>

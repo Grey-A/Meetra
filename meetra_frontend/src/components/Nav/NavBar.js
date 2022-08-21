@@ -16,8 +16,8 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto nav-items nav-dark center" navbarScroll>
             <Nav.Link href="#feature" className='nav-links'>Features</Nav.Link>
-            <Nav.Link href="#solutions" className='nav-links'>Solutions</Nav.Link>
-            <Nav.Link href="#support" className='nav-links'>Support</Nav.Link>
+            <Nav.Link href="#services" className='nav-links'>Solutions</Nav.Link>
+            <Nav.Link href="#footer" className='nav-links'>Support</Nav.Link>
           </Nav>
           <Nav className='my-auto'>
             <Nav.Link href='/login'>

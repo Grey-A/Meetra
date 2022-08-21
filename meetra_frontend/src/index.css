@@ -186,6 +186,18 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.flex-end {
+  justify-content: flex-end;
+  text-align: end;
+}
+
+div#num {
+  order: 2;
+}
+div#text {
+  order: 1;
+}
+
 .section-title {
   font-size: 1rem;
   font-weight: 400;
@@ -217,9 +229,14 @@ h1 {
   text-align: center;
   height: 1.6rem;
   border-radius: 10rem;
-  margin-right: 1rem;
-}
 
+}
+.sec-mr {
+    margin-right: 1rem;
+}
+.sec-ml {
+    margin-left: 1rem;
+}
 .section-body h2 {
   font-size: 1.1rem;
   font-weight: 400;
@@ -292,8 +309,12 @@ h1 {
     border-radius: 0;
   }
 
-  .btn--outline, .btn--primary {
+  .ms-3.btn--outline, .ms-3.btn--primary {
     min-width: 20rem;
+  }
+
+  .btn--outline, .btn--primary {
+    min-width: 17rem;
   }
   
   .center {
