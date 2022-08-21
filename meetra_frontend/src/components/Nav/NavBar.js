@@ -8,16 +8,16 @@ function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="white" variant="white" className='border-bottom sticky-top' >
       <Container fluid>
-        <Navbar.Brand href="/" className='navbar-brand'>
+        <Navbar.Brand href="#" className='navbar-brand'>
           Meet<span style={{fontWeight: 'bold'}}>ra</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto nav-items nav-dark center">
-            <Nav.Link href="/feature" className='nav-links'>Features</Nav.Link>
-            <Nav.Link href="/solution" className='nav-links'>Solutions</Nav.Link>
-            <Nav.Link href="/support" className='nav-links'>Support</Nav.Link>
+          <Nav className="ms-auto nav-items nav-dark center" navbarScroll>
+            <Nav.Link href="#feature" className='nav-links'>Features</Nav.Link>
+            <Nav.Link href="#solutions" className='nav-links'>Solutions</Nav.Link>
+            <Nav.Link href="#support" className='nav-links'>Support</Nav.Link>
           </Nav>
           <Nav className='my-auto'>
             <Nav.Link href='/login'>
