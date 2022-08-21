@@ -24,7 +24,7 @@ function Services() {
         </Col>
 
 
-        <Col mb-6 sm='11.5' md="6" lg="6">
+        <Col sm='11.5' md="6" lg="6">
           <div className="section-container">
             <div className="section-header flex-end">
               <span className="section-title">Services</span>
@@ -36,17 +36,17 @@ function Services() {
 
               <div className="section-body flex-end">
                 <h2 id='text'>Hold/Schedule meetings anytime</h2>
-                <span num className="section-id sec-ml">1</span>
+                <span  className="section-id sec-ml">1</span>
               </div>
 
               <div className="section-body flex-end">               
                 <h2 id='text'>Free Services - No payment</h2>
-                <span id='num' className="section-id sec-ml">2</span>
+                <span className="section-id sec-ml">2</span>
               </div>
 
               <div className="section-body flex-end"> 
                 <h2 id='text'>24/7 Customer support</h2>
-                <span id='num' className="section-id sec-ml">3</span>
+                <span className="section-id sec-ml">3</span>
               </div>
             </div>
 

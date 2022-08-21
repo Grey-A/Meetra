@@ -33,7 +33,7 @@ const data = [
 
 const Hero = () => {
   return (
-    <div align-items-center className='hero-container'>
+    <div className='hero-container'>
       {data.map(({id, image, title, classes}) => {
         return (
           <div className={`hero-item ${classes}`} key={id}>
