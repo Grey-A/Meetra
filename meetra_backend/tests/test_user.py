@@ -2,6 +2,7 @@ from django.test import TestCase
 
 from rest_framework import status
 from rest_framework.test import APITestCase
+from rest_framework.test import APIRequestFactory
 
 from users.models import CustomUser
 
@@ -16,7 +17,7 @@ class CustomUserModelTest(TestCase):
             email="test@case.com",
             password="testcase",
         )
-    
+
     def test_user_details(self):
 
         self.assertEqual(self.user.full_name, "test case")
