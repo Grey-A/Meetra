@@ -172,6 +172,76 @@ h1 {
   transform: translateY(7px);
 }
 
+/* Section Style */
+.section-container {
+  padding: 0 .5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: .1rem;
+}
+
+.section-subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.section-header h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.section-body {
+  display: flex;
+  flex-direction: row;
+  margin: 0 .5rem 1rem ;
+}
+
+.section-id {
+  background: rgb(255, 165, 82);
+  color: #fff;
+  font-size: 1.1rem;
+  min-width: 1.6rem;
+  text-align: center;
+  height: 1.6rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+}
+
+.section-body h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* Feature Section */
+.single-image-con {
+  overflow: hidden;
+  transition: transform .5s;
+  padding: .4rem;
+  border: none;
+  width: 100%;
+}
+
+.single-image-con img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  background-size: cover;
+}
+
+
 /* *********** MEDIA QUERIES (MEDIUM DEVICES) *********** */
 @media screen and (max-width: 990px) {
 
