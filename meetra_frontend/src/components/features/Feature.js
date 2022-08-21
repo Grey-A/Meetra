@@ -15,7 +15,7 @@ function Feature() {
         className="align-items-center mx-auto" 
         style={{marginTop: '2rem'}}
       >
-        <Col mb-6 sm='11.5' md="6" lg="6">
+        <Col sm='11.5' md="6" lg="6">
           <div className="section-container">
             <div className="section-header">
               <span className="section-title">Features</span>

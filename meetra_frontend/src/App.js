@@ -4,6 +4,8 @@ import Header from './components/header/Header'
 import NavBar from './components/Nav/NavBar'
 import Feature from './components/features/Feature'
 import Services from './components/services/Services'
+import Testimonials from './components/testimonials/Testimonials'
+
 export default function App() {
   return (
     <>          
@@ -12,6 +14,7 @@ export default function App() {
         <Header />
         <Feature /> 
         <Services />
+        <Testimonials />
         <Routes>
           <Route exact path='/'  />
         </Routes>
