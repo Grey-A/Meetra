@@ -23,7 +23,7 @@ def RegisterUserView(request):
 @api_view(["POST"])
 def BlackListTokenview(request):
     try:
-        refresh_token = request.data["refresh_token"]
+        refresh_token = request.data["refresh"]
         token = RefreshToken(refresh_token)
         token.blacklist()
         success = {"Success": "User has been logged out"}
