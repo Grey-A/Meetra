@@ -8,3 +8,18 @@ This file contains all the api endpoints, the request method they accept and wha
 
     This registers a new user(sign up), you send the username, full_name, email and password if user
     has been successfully created you will get a response that states "user has been created".
+
+3. https://128.0.0.1/api/user/token/ [POST]:
+
+    This accepts the users email and password and then generates a jwt [refresh and access] which will be used to log in the user, access token expires in 1 hour and
+    refresh token expires in 10 days
+
+4. https://128.0.0.1/api/user/token/refresh/ [POST]:
+
+    This accepts the users refresh token to generate a new access token if it expires
+
+5. https://128.0.0.1/api/user/token/blacklist/ [POST]:
+
+    This accepts the users refresh token and then blacklists it e.g. it logs out the user therefore the user must log in
+    when he enters the site again 
+    NOTE: Make sure to dete the refresh and access token from the users local storage 
