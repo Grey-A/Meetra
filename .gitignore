@@ -7,5 +7,7 @@ meetra_backend/api/migrations/__pycache__/
 meetra_backend/meetra_backend/__pycache__/
 meetra_backend/users/__pycache__/
 meetra_backend/users/migrations/__pycache__/
+meetra_backend/call/__pycache__/
+meetra_backend/call/migrations/__pycache__/
 meetra_backend/tests/__pycache__/
 
