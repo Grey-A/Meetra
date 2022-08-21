@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import IMG from '../../asset/user5.jpg'
 
-function Header() {
+function Feature() {
   return (
     <Container 
       fluid 
@@ -51,4 +51,4 @@ function Header() {
   );
 }
 
-export default Header;  
+export default Feature;  
