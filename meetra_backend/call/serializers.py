@@ -27,6 +27,7 @@ class MilestoneSerializer(serializers.ModelSerializer):
         model = Milestone
         fields = (
             "call",
+            "num",
             "title",
             "info",
             "duration",
@@ -44,6 +45,7 @@ class InviteSerializer(serializers.ModelSerializer):
         fields = (
             "call",
             "user",
+            "accepted"
         )
 
     def create(self, validated_data):

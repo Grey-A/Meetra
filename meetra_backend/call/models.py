@@ -8,6 +8,7 @@ from users.models import CustomUser
 # Create your models here.
 class Milestone(models.Model):
     call = models.ForeignKey("Call", on_delete=models.CASCADE, to_field="uid")
+    num = models.IntegerField()
     title = models.CharField(max_length=150, help_text="Title of the milestone")
     info = models.TextField(
         max_length=300, blank=True, null=True, help_text="more info about the milestone"
