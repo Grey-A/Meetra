@@ -48,7 +48,7 @@ function Feature() {
     <Container
       fluid
       id='feature' 
-      style={{ padding: '1.5rem 0 4rem 0', width: '95%'}}
+      style={{ padding: '1.5rem 0 4rem 0', width: '97%'}}
       className='border-bottom border-top'
     >
       <Card border="light" className="text-center">
