@@ -193,3 +193,20 @@ NOTE: FOR THE EXACT DATA TO BE SENT TO THE BACKEND YOU CAN ASK @Grey-A
             ]
         if failed [status code 404]:
             {html 404}
+
+11. https://127.0.0:8000/api/call/token/<uuid:uid> [GET]:
+
+    This accepts the call uid and returns a token that is used to join calls
+
+    FORMAT:
+        {
+            "call_uid": "...",
+            "user_id": "..."
+        }
+    RESPONSE:
+        if success [status code 200]:
+            { 
+                "token": "....."
+            }
+        if failed [status code 400]:
+            {empty}
