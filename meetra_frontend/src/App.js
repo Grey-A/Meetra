@@ -5,6 +5,7 @@ import NavBar from './components/Nav/NavBar'
 import Feature from './components/features/Feature'
 import Services from './components/services/Services'
 import Testimonials from './components/testimonials/Testimonials'
+import Footer from './components/footer/Footer'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Feature /> 
         <Services />
         <Testimonials />
+        <Footer />
         <Routes>
           <Route exact path='/'  />
         </Routes>
