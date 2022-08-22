@@ -3,10 +3,10 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from call.serializers import (CallSerializer, InviteSerializer,
-                              MilestoneSerializer)
+from call.serializers import CallSerializer, InviteSerializer, MilestoneSerializer
 
 from call.models import Call, Milestone, Invite
+from users.models import CustomUser
 
 
 # Create your views here.
@@ -47,14 +47,20 @@ def GetCallDetails(request, uid):
     call_duration = 0
     for mils in milestones:
         call_duration += mils.duration
-    
-    data = {'DURATION': call_duration}
+
+    data = {"DURATION": call_duration}
     call_details = CallSerializer(call).data
     milestones_details = MilestoneSerializer(milestones, many=True).data
-    data['CALL'] = call_details
-    data['MILESTONES'] = milestones_details
-    
+    data["CALL"] = call_details
+    data["MILESTONES"] = milestones_details
+
     return Response(data=data)
 
-# @api_view(["GET"])
-# def GetCallMilestones(request, uid):
+
+@api_view(["GET"])
+def GetUserInvites(request, pk):
+    invites = Invite.objects.filter(user=pk)
+    inv_serializer = InviteSerializer(data=invites, many=True)
+    if inv_serializer.is_valid():
+        pass
+    return Response(data=inv_serializer.data)

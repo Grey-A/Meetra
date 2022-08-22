@@ -17,5 +17,6 @@ def ApiEndpointsView(request):
         "api/call/milestone/create/": "This accepts [call(uid of the call), num(the number of the milestone e.g the ordering) title(txt), info(txt), duration(min:5, max: 60)]",
         "api/call/invite/create": "This accepts [call_uid, user_id]",
         "api/call/details/<uuid:uid>/": "The <uuid:uid> should contain the call uid, this returns a dictionary containting [DURATION(of the call), MILESTONES(this is a list of dictionaries that contains all the milestones associated with the call), CALL(this is a dictionary containing all the call details)", 
+        "api/user/invites/<int:pk>": "The <int:pk> refers to the users_id, this returns all the meetings the user has been invited to and their id"
     }
     return Response(api_endpoints)

@@ -45,6 +45,7 @@ class InviteSerializer(serializers.ModelSerializer):
         fields = (
             "call",
             "user",
+            "date_sent",
             "accepted"
         )
 

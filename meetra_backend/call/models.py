@@ -57,6 +57,7 @@ class Call(models.Model):
 class Invite(models.Model):
     call = models.ForeignKey(Call, on_delete=models.CASCADE)
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    date_sent = models.DateTimeField(auto_now_add=True)
     accepted = models.BooleanField(default=False)
 
     def __str__(self):

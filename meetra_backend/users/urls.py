@@ -1,5 +1,6 @@
 from django.urls import path
 
+from call.views import GetUserInvites
 from users.views import BlackListTokenview, RegisterUserView
 
 # Simple JWT dependencies
@@ -13,4 +14,5 @@ urlpatterns = [
     path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("token/blacklist/", BlackListTokenview, name="blacklist_tokens"),
+    path("invites/<int:pk>/", GetUserInvites, name="get-user-invites"),
 ]

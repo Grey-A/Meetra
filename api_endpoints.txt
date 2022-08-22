@@ -43,3 +43,8 @@ NOTE: FOR THE EXACT DATA TO BE SENT TO THE BACKEND YOU CAN ASK @Grey-A
 
     This accepts the call uid in the field <uuid:uid> and returns the call duration, call details and
     milestones with their details
+
+10. https://128.0.0.1/api/user/invites/<int:pk>/ [GET]:
+
+    This accepts the users_id in the fied <int:pk> and returns all the meetings the user was invited to, the date he
+    was invited and the call uid.
