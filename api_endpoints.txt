@@ -1,4 +1,5 @@
 This file contains all the api endpoints, the request method they accept and what they do
+NOTE: FOR THE EXACT DATA TO BE SENT TO THE BACKEND YOU CAN ASK @Grey-A 
 
 1. https://128.0.0.1/api/ [GET]:
     
@@ -23,3 +24,27 @@ This file contains all the api endpoints, the request method they accept and wha
     This accepts the users refresh token and then blacklists it e.g. it logs out the user therefore the user must log in
     when he enters the site again 
     NOTE: Make sure to dete the refresh and access token from the users local storage 
+
+6. https://128.0.0.1/api/call/create/ [POST]
+
+    This accepts [host(user_id), channel_name(txt), scheld_time(NOTE: the format is YYYY-MM-DDThh:mm,
+     you can ignore the seconds, e.g. 2015-10-22T18:17), and is_group which is either True or False]
+
+
+7. https://128.0.0.1/api/call/milestone/create/ [POST]:
+
+    This accepts the call_uid, the num(the order it appears) the title, the info and the duration which is a min of 5 and max of 60
+
+8. https://128.0.0.1/api/call/invite/create/ [POST]:
+
+    This accepts the call_uid and the user_id to create an invite for that person
+
+9. https://128.0.0.1/api/call/details/<uuid:uid>/ [GET]:
+
+    This accepts the call uid in the field <uuid:uid> and returns the call duration, call details and
+    milestones with their details
+
+10. https://128.0.0.1/api/user/invites/<int:pk>/ [GET]:
+
+    This accepts the users_id in the fied <int:pk> and returns all the meetings the user was invited to, the date he
+    was invited and the call uid.
