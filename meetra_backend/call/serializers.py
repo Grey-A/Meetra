@@ -8,6 +8,7 @@ class CallSerializer(serializers.ModelSerializer):
     class Meta:
         model = Call
         fields = (
+            "uid",
             "host",
             "channel_name",
             "about",

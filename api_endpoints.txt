@@ -38,3 +38,8 @@ NOTE: FOR THE EXACT DATA TO BE SENT TO THE BACKEND YOU CAN ASK @Grey-A
 8. https://128.0.0.1/api/call/milestone/create/ [POST]:
 
     This accepts the call_uid and the user_id to create an invite for that person
+
+9. https://128.0.0.1/api/call/details/<uuid:uid>/ [GET]:
+
+    This accepts the call uid in the field <uuid:uid> and returns the call duration, call details and
+    milestones with their details
