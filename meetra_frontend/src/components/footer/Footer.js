@@ -40,7 +40,7 @@ const Form = () => {
           />
           <button disabled={!message} 
           onClick={handleSubmit}
-          className='btn-dark btn-space'>Submit</button>
+          className='btn-dark btn-space dk-cl'>Submit</button>
         </form>
         </label>
 
