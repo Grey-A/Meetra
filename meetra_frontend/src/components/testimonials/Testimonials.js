@@ -1,10 +1,10 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import IMG from '../../asset/user5.jpg'
-import IMG2 from '../../asset/user6.jpg'
-import IMG3 from '../../asset/user7.jpg'
-import IMG4 from '../../asset/user8.jpg'
+import IMG from '../../asset/user7.jpg'
+import IMG2 from '../../asset/user8.jpg'
+import IMG3 from '../../asset/user9.jpg'
+import IMG4 from '../../asset/user1b.jpg'
 import Card from 'react-bootstrap/Card'
 
 const data = [

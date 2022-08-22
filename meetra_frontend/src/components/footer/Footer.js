@@ -6,7 +6,6 @@ import Col from 'react-bootstrap/esm/Col'
 import Twitter from '../../asset/twitter.svg'
 import Linkedin from '../../asset/linkedin (1).svg'
 import Instagram from '../../asset/instagram.svg'
-import { Link } from 'react-router-dom'
 
    
 const Form = () => {
@@ -36,6 +35,7 @@ const Form = () => {
             id="message"
             name="message"
             value={message}
+            placeholder='youremail@abcd.com'
             onChange={event => setMessage(event.target.value)}
           />
           <button disabled={!message} 
@@ -76,7 +76,7 @@ const FooterBottom = () => {
   return (
     <Container fluid style={{background: 'rgb(30, 30, 30)', color: '#f2f2f2'}} >
       <Row sm='6'>
-        <Col lg='5' md='6' sm='12'>
+        <Col lg='6' md='6' sm='12'>
           <div className='footer-container'>
             <div className="footer-logo">
               Meet<span>ra</span>
@@ -123,9 +123,8 @@ const FooterContact = () => {
     Year()
   }, [])
   return (
-    <Container fluid style={{background: 'rgb(30, 30, 30)', color: '#f2f2f2', borderTop: '.1px solid rgb(165, 148, 148)', }}>
-      <div style={{display: 'grid',     gridTemplateColumns: 'repeat(2, 1fr)'
-}}>
+    <Container fluid style={{background: 'rgb(30, 30, 30)', color: '#f2f2f2', }}>
+      <div style={{borderTop: '.1px solid rgb(165, 148, 148)', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', margin: '0 1.8rem', }}>
         <div>
           <div className="footer-icons">
             <a href='http://www.twitter.com/' target='_blank' rel='noreferral noopener'><img src={Twitter} alt="Twitter Icon" /></a>
@@ -138,9 +137,11 @@ const FooterContact = () => {
             <span>
               &copy; {year}
             </span>
-            <div className="footer-logo">
-              Meet<span>ra</span>
-            </div>
+            <a href='http://www.meetra.com'
+              target='_blank' rel='noreferral noopener'
+              className="footer-logo">
+              Meet<span>ra</span>.com
+            </a>
           </div>
         </div>
       </div>
@@ -152,7 +153,7 @@ const FooterContact = () => {
 
 const Footer = () => {
   return (
-    <Container fluid id='footer' style={{padding: '0 0rem 0rem 0', width: '100%'}} >
+    <Container fluid id='footer' style={{background: 'rgb(30, 30, 30)', padding: '0 0rem 0rem 0', width: '100%'}} >
       <FooterTop />
       <FooterBottom />
       <FooterContact />

@@ -123,6 +123,7 @@ h1 {
   border-bottom: 0.2rem solid #000;
   border-radius: 0 0 .5rem .5rem;
 }
+
 .btn.active {
   background: transparent;
   border-bottom: none;
@@ -335,7 +336,7 @@ h1 {
 
 .footer-container {
   margin: 3rem 0;
-  padding: 1rem auto;
+  padding: 1rem 0rem 1rem 2rem;
   width: 80%;
 }
 
@@ -409,17 +410,18 @@ ul li a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   max-width: 100%;
 }
 
 label .form {
-  width: 100%;
+  min-width: 100%;
 }
 .form input{
   padding: .41rem;
-  width: 100%;
-  background: #eee7e7;
+  width: 17rem;
+  background: rgb(87, 87, 87);
+  color: rgb(155, 155, 155);
   border-radius: .1rem;
   border: none;
   margin-top: .2rem;
@@ -437,15 +439,16 @@ label .form {
 
 .form input::placeholder {
   font-size: 100%;
+  color: rgb(155, 155, 155);
   word-spacing: .2rem;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-family: 'Times New Roman', Times, serif;
 }
 
 .btn-dark {
   padding: .35rem 1rem;
-  color: #fff;
-  background: #141414;
+  color: rgb(255, 255, 255);
+  background: rgb(155, 155, 155);
   margin-left: -1rem;
   margin-top: .18rem;
 }
@@ -472,7 +475,7 @@ label .form {
   display: flex;
   flex-direction: row;
   max-width: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .footer-icons a {
@@ -482,6 +485,16 @@ label .form {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+
+.footer-logo {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(237, 237, 237);
+}
+
+.footer-logo:hover {
+  color: rgb(237, 237, 237);
 }
 
 .footer-icons a:hover {
@@ -502,8 +515,8 @@ label .form {
   flex-direction: row;
   justify-content: flex-end;
   gap: .5rem;
-  padding: 1rem;
-  color: gray;
+  padding: 1rem 0;
+  color: rgb(237, 237, 237);
 }
 
 /* *********** MEDIA QUERIES (MEDIUM DEVICES) *********** */
