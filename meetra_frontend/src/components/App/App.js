@@ -27,12 +27,12 @@
 
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from '../Header/Header'
+import Header from '../header/Header'
 import NavBar from '../Nav/NavBar'
-import Feature from '../Features/Feature'
-import Services from '../Services/Services'
-import Testimonials from '../Testimonials/Testimonials'
-import Footer from '../Footer/Footer'
+import Feature from '../features/Feature'
+import Services from '../services/Services'
+import Testimonials from '../testimonials/Testimonials'
+import Footer from '../footer/Footer'
 
 export default function App() {
   return (
