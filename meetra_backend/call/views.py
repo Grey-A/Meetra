@@ -16,8 +16,11 @@ def CreateCall(request):
     if call_serializer.is_valid():
         call = call_serializer.save()
         if call:
-            return Response(status=status.HTTP_201_CREATED)
-    return Response(call_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            data = {
+                "call_id": call.uid
+            }
+            return Response(status=status.HTTP_201_CREATED, data=data)
+    return Response(data=call_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(["POST"])

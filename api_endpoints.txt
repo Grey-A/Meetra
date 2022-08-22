@@ -35,7 +35,7 @@ NOTE: FOR THE EXACT DATA TO BE SENT TO THE BACKEND YOU CAN ASK @Grey-A
 
     This accepts the call_uid, the num(the order it appears) the title, the info and the duration which is a min of 5 and max of 60
 
-8. https://128.0.0.1/api/call/milestone/create/ [POST]:
+8. https://128.0.0.1/api/call/invite/create/ [POST]:
 
     This accepts the call_uid and the user_id to create an invite for that person
 
