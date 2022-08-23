@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from random import randint
+import time
+
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -8,6 +10,11 @@ from call.serializers import CallSerializer, InviteSerializer, MilestoneSerializ
 from call.models import Call, Milestone, Invite
 from users.models import CustomUser
 
+from agora_token_builder import RtcTokenBuilder
+
+# Agora Global Variables
+appId = "8b21b3a8f25c48ea918e90cfd4440fd2"
+appCertificate = "49a8dc3c60cc40cd99094583fc1e3fac"
 
 # Create your views here.
 @api_view(["POST"])
@@ -16,9 +23,7 @@ def CreateCall(request):
     if call_serializer.is_valid():
         call = call_serializer.save()
         if call:
-            data = {
-                "call_id": call.uid
-            }
+            data = {"call_id": call.uid}
             return Response(status=status.HTTP_201_CREATED, data=data)
     return Response(data=call_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -67,3 +72,27 @@ def GetUserInvites(request, pk):
     if inv_serializer.is_valid():
         pass
     return Response(data=inv_serializer.data)
+
+
+@api_view(["GET"])
+def GenerateToken(request, uid):
+    global appId
+    global appCertificate
+    exptime = 3600 * 3
+    currtime = time.time()
+    privilegeExpiredTs = currtime + exptime
+    role = 1
+
+    channelName = str(uid)
+    uid = randint(1, 230)
+    token = RtcTokenBuilder.buildTokenWithUid(
+        appId,
+        appCertificate,
+        channelName,
+        uid,
+        role,
+        privilegeExpiredTs
+    )
+    if token:
+        return Response(status=status.HTTP_200_OK, data={"token":token})
+    return Response(status=status.HTTP_400_BAD_REQUEST, data=token.errors)
