@@ -11,7 +11,6 @@ import Instagram from '../../asset/instagram.svg'
 const Form = () => {
 
     const [message, setMessage] = useState('');
-    const isAnonymous = true;
     
   
     const handleClick = event => {
@@ -28,24 +27,22 @@ const Form = () => {
   
     return (
 
-        <label htmlFor="message">Sign up to our newletter
-        <form action="#" className="form">
-          <input
-            type="email"
-            id="message"
-            name="message"
-            value={message}
-            placeholder='youremail@abcd.com'
-            onChange={event => setMessage(event.target.value)}
-          />
+        <div className="form-container">
+          Sign up to our newletter
+          <form action="#" className="form">
+            <input
+              type="email"
+              id="message"
+              name="message"
+              value={message}
+              placeholder='youremail@abcd.com'
+              onChange={event => setMessage(event.target.value)}
+            />
           <button disabled={!message} 
           onClick={handleSubmit}
           className='btn-dark btn-space dk-cl'>Submit</button>
         </form>
-        </label>
-
-
-
+        </div>
     );
 
   }
@@ -127,9 +124,9 @@ const FooterContact = () => {
       <div style={{borderTop: '.1px solid rgb(165, 148, 148)', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', margin: '0 1.8rem', }}>
         <div>
           <div className="footer-icons">
-            <a href='http://www.twitter.com/' target='_blank' rel='noreferral noopener'><img src={Twitter} alt="Twitter Icon" /></a>
-            <a href='http://www.instagram.com/' target='_blank' rel='noreferral noopener'><img src={Instagram} alt="Instagram Icon" /></a>
-            <a href='http://www.linkedin.com/' target='_blank' rel='noreferral noopener'><img src={Linkedin} alt="Linkedin Icon" /></a>
+            <a href='http://www.twitter.com/' target="_blank" rel="noreferrer"><img src={Twitter} alt="Twitter Icon" /></a>
+            <a href='http://www.instagram.com/' target="_blank" rel="noreferrer"><img src={Instagram} alt="Instagram Icon" /></a>
+            <a href='http://www.linkedin.com/' target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin Icon" /></a>
           </div>
         </div>
         <div>
@@ -138,7 +135,7 @@ const FooterContact = () => {
               &copy; {year}
             </span>
             <a href='http://www.meetra.com'
-              target='_blank' rel='noreferral noopener'
+              target="_blank" rel="noreferrer"
               className="footer-logo">
               Meet<span>ra</span>.com
             </a>
