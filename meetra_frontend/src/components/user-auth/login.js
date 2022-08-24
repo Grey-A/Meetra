@@ -82,7 +82,7 @@ export default function Login({ setToken }) {
           <Col>
             <div className="log-wrapper">
               <h4 className="logo margin-t-3 margin-b-1">Sign Up</h4>
-              <h6 className='margin-b-3'>Already have an account? <a>Login</a></h6>
+              <h6 className='margin-b-3'>Don't have an account?<button onClick={handleSubmit}>Sign Up</button></h6>
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
                   <Form.Label>Email</Form.Label>
@@ -105,7 +105,7 @@ export default function Login({ setToken }) {
                 <div className="log-btns">
                   <Button className=' btn-log'>Login</Button>
                   <Button className=' btn-log'>
-                    <img src={ICON} alt="google icon" className='btn-icon' />
+                    <img src={ICON} alt="google icon" className='btn-icon' onClick={handleSubmit}/>
                      Sign Up with Google
                   </Button>
                 </div>

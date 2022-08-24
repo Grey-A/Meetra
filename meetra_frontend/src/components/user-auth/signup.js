@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useNavigate } from 'react';
+import React, { useState, useEffect, useNavigate } from 'react';
 import Col from 'react-bootstrap/esm/Col';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
@@ -6,11 +6,13 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import IMG from '../../asset/user7.jpg'
 import ICON from '../../asset/Not_In_Use_Image/Sign Up and Login/google_PNG19635.png'
+import axiosInstance from './axios';
 
 export default function SignUp() {
 
 
   const navigate = useNavigate();
+
   const initialFormData = Object.freeze({
     full_name: '',
     email: '',
@@ -59,7 +61,7 @@ export default function SignUp() {
   }, updateFormData({
     ...formData,
     
-    [e.target.password2]: e.target.value,
+    password2: formData.password2,
    }))
 
  
@@ -120,7 +122,7 @@ export default function SignUp() {
           <Col>
             <div className="log-wrapper">
               <h4 className="logo margin-t-3 margin-b-1">Sign Up</h4>
-              <h6 className='margin-b-3'>Already have an account? <a>Login</a></h6>
+              <h6 className='margin-b-3'>Already have an account? <button onClick={handleSubmit}>Login</button></h6>
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-2">
                   <Form.Label htmlFor='name'>Name</Form.Label>
