@@ -37,6 +37,8 @@ we came to two conclusions regarding this matter, **_`productive meetings arent 
 - the user will then set the time in which a reminder will be send to everyone involved in the meeting that it will take place ranging from `1hour upto a day before the meeting.`
 - then the user will provide what we at meetra call _`milestones`_ for the meeting which are equivalent to bullet points or briefs which outline the major talking points of the meeting with their description and also a duration in which it will take to discuss that milestone, our team decided that the max duration shouldnt be more than `an hour`, if it is then we belive it should be 2 milestones instead of 1.
 - Afterwards the user will add the ones he wants to invite to his meeting and when he clicks "create meeting", an email, text message and inappp notification will be sent to the invitees but they will only be added to the meeting list if they accept the meeting in the app.
+- When the user accepts an invitation he will be sent a pdf file which contains the meeting details which are the title, description, scheduled time and the milestones and their decriptions.
+- While in a meeting the user will see the milestone details at the right hand side with a chat interface and a timer which shows which milestone they are currently discusing and the time left to move on to the next segment.
 
 # Resources Used
 ---
