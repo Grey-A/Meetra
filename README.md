@@ -27,8 +27,9 @@ The appproach we took towards this was that we asked ourselves these questions,
 - `how do we make meetings productive?` 
 - `what exactly is productive?` 
 - `and how do we increase productivity?` <br/>
-we came to two conclusions regarding this matter, **_`productive meetings arent necessarily long and productive meetings go straight to the point.`_**, so having this in mind we began searching for how to reduce the time of our users spend in those endless meetings while addressing only the keypoints and this [article](https://fellow.app/blog/meetings/effective-strategies-to-shorten-meetings-at-work/ "Fellow App") helped us map out exactly how to do that.<br/>
-##### We designed our website according to the following:
+we came to two conclusions regarding this matter, **_`productive meetings arent necessarily long and productive meetings go straight to the point.`_**, so having this in mind we began searching for how to reduce the time of our users spend in those endless meetings while addressing only the keypoints and this [article](https://fellow.app/blog/meetings/effective-strategies-to-shorten-meetings-at-work/ "Fellow App") helped us map out exactly how to do that. We designed our website with the objective of segmenting meetings in bullet points while making it clear what the bullet point (Milestone as we call it) is all about, the following is how our user will interact with the website.
+
+##### Usage Steps:
 - After a successful login when our user choses to create a meeting, 
 - he will be prompted for a **`name/title`** for the meeting so that the ones he is inviting will know a general outline of what the meeting is about e.g **End of year Conference**, 
 - after that then he will be prompted for a **`short description`** that further outlines what the meeting is about e.g. **Planning xyz company's annual end of year conference including budget allocation and guest list**, 
