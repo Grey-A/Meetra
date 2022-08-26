@@ -346,7 +346,6 @@ import { useRef, useState, useEffect } from "react";
 import axios from './axios';
 import { Link, useNavigate } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
-import Button from "react-bootstrap/esm/Button";
 import IMG from '../../asset/user7.jpg'
 
 
@@ -487,12 +486,13 @@ const Register = () => {
                       <span className={validFull_name ? "valid" : "hide"}><i className="fa fa-check"></i></span>
                       <span className={validFull_name || !full_name ? "hide" : "invalid"}><i className="fa fa-times"></i></span>
                     </Form.Label>
-                    <Form.Control type="text" id="full_name" ref={userRef} autoComplete="off" onChange={(e) => setFull_name(e.target.value)} value={full_name} required aria-invalid={validFull_name ? "false" : "true"}aria-describedby="fndnote" onFocus={() => setFull_nameFocus(true)} onBlur={() => setFull_nameFocus(false)} />
+                    <Form.Control placeholder='Enter Full Name' type="text" id="full_name" ref={userRef} autoComplete="off" onChange={(e) => setFull_name(e.target.value)} value={full_name} required aria-invalid={validFull_name ? "false" : "true"}aria-describedby="fndnote" onFocus={() => setFull_nameFocus(true)} onBlur={() => setFull_nameFocus(false)} />
 
                     <p id="fnnote" className={full_nameFocus && full_name && !validFull_name ? "instructions" : "offscreen"}>
                             <i className="fa fa-info-circle"></i>
-                            4 to 24 characters.<br />
+                            4 to 24 characters most be entered.<br />
                             Must begin with a letter.<br />
+                            Must include a single space.<br />
                             Letters, numbers, underscores, hyphens allowed.
                     </p>
 
@@ -504,12 +504,12 @@ const Register = () => {
                       <span className={validUsername || !username ? "hide" : "invalid"}><i className="fa fa-times"></i></span>
                     </Form.Label>
                     <Form.Control
-                      type="text"
+                      type="text" placeholder='Enter Username' 
                       id="username" autoComplete="off" onChange={(e) => setUsername(e.target.value)} value={username} required aria-invalid={validUsername ? "false" : "true"} aria-describedby="uidnote" onFocus={() => setUsernameFocus(true)} onBlur={() => setUsernameFocus(false)} />
 
                       <p id="uidnote" className={usernameFocus && username && !validFull_name ? "instructions" : "offscreen"}>
                             <i className="fa fa-info-circle"></i>
-                            4 to 24 characters.<br />
+                            3 to 24 characters.<br />
                             Must begin with a letter.<br />
                             Letters, numbers, underscores, hyphens allowed.
                         </p>
@@ -521,14 +521,15 @@ const Register = () => {
                       <span className={validEmail || !email ? "hide" : "invalid"}><i className="fa fa-times"></i></span>
                     </Form.Label>
 
-                    <Form.Control type="text" id="email" autoComplete="off" onChange={(e) => setEmail(e.target.value)} value={email} required aria-invalid={validEmail ? "false" : "true"} aria-describedby="emnote" onFocus={() => setEmailFocus(true)} onBlur={() => setEmailFocus(false)}
+                    <Form.Control type="text" id="email" placeholder='youremail@abcd.com ' autoComplete="off" onChange={(e) => setEmail(e.target.value)} value={email} required aria-invalid={validEmail ? "false" : "true"} aria-describedby="emnote" onFocus={() => setEmailFocus(true)} onBlur={() => setEmailFocus(false)}
                     />
 
                     <p id="emnote" className={emailFocus && email && !validEmail ? "instructions" : "offscreen"}>
                       <i className="fa fa-info-circle"></i>
-                        4 to 24 characters.<br />
                         Must begin with a letter.<br />
-                        Letters, numbers, underscores, hyphens allowed.
+                        Must contain: <span aria-label="at synbol">!</span><br />
+                        Must contain: <span aria-label="full stop">.</span><br />
+                        Spaces not allowed but letters, numbers, underscores, hyphens are allowed.
                     </p>
                   </Form.Group>
                   <Form.Group>
@@ -537,14 +538,14 @@ const Register = () => {
                       <span className={validPwd ? "valid" : "hide"}><i className="fa fa-check"></i></span>
                       <span className={validPwd || !pwd ? "hide" : "invalid"}><i className="fa fa-times"></i></span>
                     </Form.Label>
-                    <Form.Control type="password" id="password" onChange={(e) => setPwd(e.target.value)} value={pwd} required aria-invalid={validPwd ? "false" : "true"} aria-describedby="pwdnote" onFocus={() => setPwdFocus(true)} onBlur={() => setPwdFocus(false)}
+                    <Form.Control placeholder='Enter Password' type="password" id="password" onChange={(e) => setPwd(e.target.value)} value={pwd} required aria-invalid={validPwd ? "false" : "true"} aria-describedby="pwdnote" onFocus={() => setPwdFocus(true)} onBlur={() => setPwdFocus(false)}
                     />
                     
                     <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
                       <i className="fa fa-info-circle"></i>
-                        8 to 24 characters.<br />
+                        Password must be 8 to 24 characters.<br />
                         Must include uppercase and lowercase letters, number and a special character.<br />
-                        Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
+                        Allowed special characters are: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
                     </p>
                   </Form.Group>
                   <Form.Group>
@@ -557,7 +558,7 @@ const Register = () => {
                         <i className="fa fa-times"></i>
                       </span>
                       </Form.Label>
-                        <Form.Control type="password" id="confirm_pwd" onChange={(e) => setMatchPwd(e.target.value)} value={matchPwd} required aria-invalid={validMatch ? "false" : "true"} aria-describedby="confirmnote" onFocus={() => setMatchFocus(true)} onBlur={() => setMatchFocus(false)}
+                        <Form.Control type="password"  placeholder="Confirm password" id="confirm_pwd" onChange={(e) => setMatchPwd(e.target.value)} value={matchPwd} required aria-invalid={validMatch ? "false" : "true"} aria-describedby="confirmnote" onFocus={() => setMatchFocus(true)} onBlur={() => setMatchFocus(false)}
                         />
 
                         <p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : "offscreen"}>
@@ -566,7 +567,7 @@ const Register = () => {
                         </p>
                   </Form.Group>
 
-                  <button className='btn-login' type='submit'  onClick={handleSubmit}> Login </button>
+                  <button className='btn-login' type='submit'  disabled={!validFull_name || !validUsername || !validEmail || !validPwd || !validMatch ? true : false}  onClick={handleSubmit}> Sign Up </button>
                 </Form>
               )}  
         </div>    

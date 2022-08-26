@@ -102,8 +102,8 @@ export default function Login() {
             {success ? navigate('/dashboard') : (
           <Form onSubmit={handleSubmit}>
 
-            <Form.Group className="mb-1 form-group">
-              <Form.Label htmlFor='email'>Email:</Form.Label>
+            <Form.Group className="mb-3 form-group">
+              <Form.Label htmlFor='email'> Email: </Form.Label>
               <Form.Control type="email" id="email" ref={userRef}autoComplete='off' placeholder="Enter Email" onChange={(e) => setEmail(e.target.value)} value={email} required />
                     
             </Form.Group>

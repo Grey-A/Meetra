@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="wrapper">
         <Routes>
-          <Route path="/" element={<Preferences />} />
+          <Route path="*" element={<Preferences />} />
           <Route path="/dashboard" element={<Dashboard />} />          
           <Route path="/signUp" element={<SignUp />} />          
           <Route path="/login" element={<Login />} />          

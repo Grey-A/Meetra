@@ -44,11 +44,9 @@ h1 {
   display: inline-block;
   background-color: transparent;
   color: #000;
-  padding: 8px 20px;
   border: 1px solid var(--primary);  
   border-radius: .3rem;
   transition: all 0.3s ease-out;
-  display: inline-block;
   width: fit-content;
 }
 
@@ -410,20 +408,22 @@ ul li a:hover {
   justify-content: flex-start;
   align-items: flex-start;
   padding-bottom: 1.5rem;
-  max-width: 100%;
+  max-width: 70vw;
 }
 
 label .form {
   min-width: 100%;
 }
 .form input{
-  padding: .41rem;
-  width: 17rem;
-  background: rgb(87, 87, 87);
-  color: rgb(155, 155, 155);
-  border-radius: .1rem;
-  border: none;
-  margin-top: .2rem;
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 16px 229px 16px 20px;
+gap: 10px;
+width: 397px;
+height: 3.3rem;
+background: #575757;
+border-radius: 7px 0px 0px 7px;
 }
 
 .form input:focus{
@@ -466,13 +466,21 @@ label .form {
 }
 
 .form button:disabled {
-  background: rgb(155, 155, 155);
+  background: #9B9B9B;
   color: #b6b0b0;
 }
 
 .dk-cl {
-  background: rgb(155, 155, 155);
-  color: rgb(237, 237, 237);
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 7px 18px;
+gap: 10px;
+height: 3.3rem;
+border-radius: 0px 7px 7px 0px;
+
 }
 
 .dk-cl:hover {
@@ -511,7 +519,7 @@ label .form {
 }
 
 .footer-icons img {
-  width: 1rem;
+  width: .9rem;
   margin: .3rem;
   font-size: 1rem;
   object-fit: cover;
@@ -681,7 +689,7 @@ label .form {
 .form-sidebar {
   max-width: 25rem;
   min-width: 22rem;
-  height: 100vh;
+  height: 100%;
   background: #1E1E1E;
   border-radius: 15px;
   display: flex;
@@ -693,8 +701,9 @@ label .form {
 }
 
 .signup {
-  height: 120vh;
+  height: 115vh;
 }
+
 .side-bar-top h5 {
   width: 285px;
   height: 106px;
@@ -734,6 +743,7 @@ label .form {
   background: #363636;
 }
 
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -757,9 +767,9 @@ label .form {
 
 .form-control {
   box-sizing: border-box;
-  padding: .5rem 1rem;
+  padding: .5rem .2rem;
   width: 25rem;
-  height: 3rem;
+  height: 2.7rem;
   background: #FFFFFF;
   border: 2px solid #575757;
   border-radius: 7px;
@@ -804,7 +814,6 @@ label .form {
 }
 
 .btn-log,
-.form-control,
  input[type="text"],
  input[type="password"],
  input[type="datetime"],
@@ -819,6 +828,9 @@ label .form {
  input[type="color"] {
   border: .15rem solid #242422;
 }
+
+
+
 
 .btn-log:first-child:hover {
   background: #000;
@@ -1013,12 +1025,23 @@ label .form {
 
   .form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     max-width: 100%;
-    margin: auto auto auto 0;
+    
+  }
+
+  .form input {
+    width: 100%;
+    padding: .4rem;
+    height: 2.8rem;
+  }
+
+  .dk-cl {
+    width: fit-content;
+    height: 2.8rem;
   }
 
   .btn-dark {
@@ -1068,11 +1091,12 @@ label .form {
   }
 
   .footer-icons {
+    font-size: .9rem;
     padding: 1rem .1rem;
   }
 
   .date {
-    padding: 1rem .1rem;
+    padding: 1rem 0rem;
   }
 
   .h1-sm {
@@ -1105,10 +1129,28 @@ label .form {
 
   .footer-container {
     margin: 3rem 0 0rem;
-    padding: 1rem auto;
-    width: 80%;
+    padding: 1rem 0;
+    width: 100%;
   }
 
+  ul li {
+    font-size: .9rem;
+  }
 
+  .date {
+    gap: .1rem;
+    padding: 1rem 0;
+    font-size: .9rem;
+  }
+
+  .footer-logo {
+    font-size: .9rem;
+  }
+
+  .footer-text {
+    font-size: 1rem;
+    color: #f2f2f2;
+    margin: .5rem auto 1.5rem auto;
+  }
   
 }

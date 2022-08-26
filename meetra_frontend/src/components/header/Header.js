@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/esm/Button';
 import Hero from '../Hero/Hero';
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
@@ -12,8 +13,8 @@ function Header() {
           <h1 className='text-center-sm h1-sm' style={{ fontSize: '3rem'}}>Fast, reliable and <span style={{color: "rgb(255, 165, 82"}}>secure</span> Conferencing</h1>
           <p className='text-center-sm p-s'>Stay connected and access shared content anytime to learn, meet, plan and innovate together</p>
           <div className="center bottom">
-            <Button variant="light"  className='btn btn--primary '>Get Started</Button>{' '}
-            <Button variant="light" className='btn btn--outline pt-auto'>Learn More</Button>{' '}
+            <button className='btn btn--primary '><Link to='/login'>Get Started</Link></button>{' '}
+            <button className='btn btn--outline'><Link to='features'>Learn More</Link></button>{' '}
           </div>
           
         </Col>

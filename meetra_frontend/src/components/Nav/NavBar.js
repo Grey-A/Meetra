@@ -21,10 +21,10 @@ function NavBar() {
           </Nav>
           <Nav className='my-auto'>
             <Nav.Link href='/login'>
-              <Button className='btn btn--outline ms-3' >Login</Button>
+              <button className='btn btn--outline ms-3' >Login</button>
             </Nav.Link>
             <Nav.Link href="/signUp">
-              <Button variant="dark" className='btn btn--primary ms-3'>  Sign Up </Button>
+              <button className='btn btn--primary ms-3'>  Sign Up </button>
             </Nav.Link>    
           </Nav>
         </Navbar.Collapse>
