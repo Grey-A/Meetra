@@ -37,13 +37,13 @@ export default function Login() {
      });
 
       console.log(response?.data);
-      console.log(response?.accessToken);
+      console.log(response?.access);
       console.log(JSON.stringify(response?.data))
       
       // AccessToken
-      const accessToken = response?.data?.accessToken;
+      const access = response?.data?.access;
       const refresh = response?.data?.refresh;
-      setAuth({ email, pwd, refresh, accessToken });
+      setAuth({ email, pwd, refresh, access });
       // clear state and controlled inputs
       setEmail('');
       setPwd('');
