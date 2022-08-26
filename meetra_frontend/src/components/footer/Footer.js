@@ -27,7 +27,7 @@ const Form = () => {
   
     return (
 
-        <div className="form-container">
+        <div className="footerform-container">
           Sign up to our newletter
           <form action="#" className="form">
             <input
@@ -40,7 +40,7 @@ const Form = () => {
             />
           <button disabled={!message} 
           onClick={handleSubmit}
-          className='btn-dark btn-space dk-cl'>Submit</button>
+          className='dk-cl'>Submit</button>
         </form>
         </div>
     );
@@ -71,7 +71,7 @@ const FooterTop = () => {
 
 const FooterBottom = () => {
   return (
-    <Container fluid style={{background: 'rgb(30, 30, 30)', color: '#f2f2f2'}} >
+    <Container style={{background: 'rgb(30, 30, 30)', color: '#f2f2f2'}} >
       <Row sm='6'>
         <Col lg='6' md='6' sm='12'>
           <div className='footer-container'>
@@ -92,9 +92,9 @@ const FooterBottom = () => {
                     Quick links
                   </span>
                   <ul>
-                    <li><a href="#feature" className=''>Features</a></li>
-                    <li><a href="#services" className=''>Solutions</a></li>
-                    <li><a href="#footer" className=''>Support</a></li> 
+                    <li><a href="#feature">Features</a></li>
+                    <li><a href="#services">Solutions</a></li>
+                    <li><a href="#footer">Support</a></li> 
                   </ul>
                 </div>
                 <div className="footer-links">
@@ -102,9 +102,10 @@ const FooterBottom = () => {
                     Support
                   </span>
                   <ul>
-                    <li><a href="#feature" className=''>Features</a></li>
-                    <li><a href="#services" className=''>Solutions</a></li>
-                    <li><a href="#footer" className=''>Support</a></li> 
+                    <li>Account</li>
+                    <li>Feedbacks</li>
+                    <li>Privacy & Security</li> 
+                    <li>Terms & Conditions</li> 
                   </ul>
                 </div>
               </div>
@@ -121,7 +122,7 @@ const FooterContact = () => {
   }, [])
   return (
     <Container fluid style={{background: 'rgb(30, 30, 30)', color: '#f2f2f2', }}>
-      <div style={{borderTop: '.1px solid rgb(165, 148, 148)', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', margin: '0 1.8rem', }}>
+      <div style={{borderTop: '.1px solid rgb(165, 148, 148)', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
         <div>
           <div className="footer-icons">
             <a href='http://www.twitter.com/' target="_blank" rel="noreferrer"><img src={Twitter} alt="Twitter Icon" /></a>
