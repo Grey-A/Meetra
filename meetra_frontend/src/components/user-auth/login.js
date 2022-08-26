@@ -34,7 +34,6 @@ export default function Login() {
       { email: email, password: pwd },
       {
         headers: { 'Content-Type': 'application/json' },
-        withCredentials: true
      });
 
       console.log(response?.data);

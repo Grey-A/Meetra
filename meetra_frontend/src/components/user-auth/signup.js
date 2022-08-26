@@ -418,11 +418,10 @@ const Register = () => {
             return;
         }
         try {
-            const response = await axios.post('http://localhost:3000/api/user/register/',
+            const response = await axios.post('http://127.0.0.1:8000/api/user/register/',
                 { full_name: full_name, username: username, email: email, password: pwd },
                 {
                     headers: { 'Content-Type': 'application/json' },
-                    withCredentials: true
                 }
             );
             console.log(response?.data);
