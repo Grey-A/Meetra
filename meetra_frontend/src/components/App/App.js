@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Preferences from '../Preferences/Preferences';
 import SignUp from '../user-auth/signup';
 import Login from '../user-auth/login';
 import Home from '../Home/Home';
+import NewMeeting from '../New Meeting/NewMeeting';
 
 function App() {
+ const [token, setToken] = useState();
 
+ if(!token) {
+  return (<Login setToken={setToken} />)
+ }
  
   return (
     <div className="wrapper">
+      <NewMeeting />
         <Routes>
           <Route path="*" element={<Preferences />} />
           <Route path="/home" element={<Home />} />          

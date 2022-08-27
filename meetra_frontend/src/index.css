@@ -765,7 +765,7 @@ border-radius: 0px 7px 7px 0px;
   color: #1E1E1E;
 }
 
-.form-control {
+.form-container .form-control {
   box-sizing: border-box;
   padding: .5rem .2rem;
   width: 25rem;

@@ -4,9 +4,10 @@ import Form from 'react-bootstrap/Form';
 import IMG from '../../asset/user7.jpg'
 import axios from './axios';
 import { Link, useNavigate, } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
 
-export default function Login() {
+export default function Login({ setToken }) {
   const { setAuth } = useContext(AuthContext)
   const userRef = useRef();
   const errRef = useRef();
@@ -64,7 +65,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    token()
+    setToken(token)
   }
 
 
@@ -120,6 +121,10 @@ export default function Login() {
   </section>
 
   )
+}
+
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired
 }
 
 
