@@ -1,17 +1,20 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
-import AuthContext from '../../Context/AuthProvider'
+import React, { useState, useEffect, useRef } from 'react';
+import useAuth from '../../Hooks/useAuth';
 import Form from 'react-bootstrap/Form';
 import IMG from '../../asset/user7.jpg'
 import axios from './axios';
-import { Link, useNavigate, } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types'
 
 
-export default function Login({ setToken }) {
-  const { setAuth } = useContext(AuthContext)
+export default function Login() {
+  const { setAuth } = useAuth()
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/"
   const userRef = useRef();
   const errRef = useRef();
-  let navigate = useNavigate();
+  
 
 
   const [email, setEmail] = useState('')
@@ -65,7 +68,7 @@ export default function Login({ setToken }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setToken(token)
+    token()
   }
 
 
@@ -99,7 +102,7 @@ export default function Login({ setToken }) {
           <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive"> {errMsg} </p>
         </div>
 
-            {success ? navigate('/home') : (
+            {success ? navigate( from, {replace: true}) : (
           <Form onSubmit={handleSubmit}>
 
             <Form.Group className="mb-3 form-group">
@@ -122,11 +125,6 @@ export default function Login({ setToken }) {
 
   )
 }
-
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired
-}
-
 
 
 
