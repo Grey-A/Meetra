@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/esm/Col'
 import Twitter from '../../asset/twitter.svg'
 import Linkedin from '../../asset/linkedin (1).svg'
 import Instagram from '../../asset/instagram.svg'
+import { Link } from 'react-router-dom'
 
    
 const Form = () => {
@@ -63,7 +64,7 @@ const FooterTop = () => {
         confrencing meeting, planning and more has never been this easier and properly organised. Thanks to Meetra for making this simple and easy
       </span>
       <div className="margin-tb">
-        <Button variant="white" className='btn btn--primary'>Get started</Button>
+        <Button variant="white" className='btn btn--primary'><Link to='/dashboard'>Dashboard</Link></Button>
       </div>
     </div>
   )

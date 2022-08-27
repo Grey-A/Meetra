@@ -1,16 +1,16 @@
 
 import React, { useState } from 'react'
 import {  Routes, Route } from 'react-router-dom'
-import Header from '../header/Header'
-import NavBar from '../Nav/NavBar'
+import Header from '../header/HeaderHome'
+import NavBar from '../Nav/NavBarHome'
 import Feature from '../features/Feature'
 import Services from '../services/Services'
 import Testimonials from '../testimonials/Testimonials'
-import Footer from '../footer/Footer'
+import Footer from '../footer/FooterHome'
 import SignUp from '../user-auth/signup'
 
-export default function Preferences() {
-  const [token, setToken] = useState()
+export default function Home() {
+  const [ open, setOpen ] = useState(false)
 
   return (
     <>          
@@ -23,7 +23,7 @@ export default function Preferences() {
       <Routes>
         <Route 
           path='/signUp' 
-          element={<SignUp /> }
+          element={ <SignUp /> }
          />
       </Routes>
     </>

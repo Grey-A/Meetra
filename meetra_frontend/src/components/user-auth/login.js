@@ -98,7 +98,7 @@ export default function Login() {
           <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive"> {errMsg} </p>
         </div>
 
-            {success ? navigate('/dashboard') : (
+            {success ? navigate('/home') : (
           <Form onSubmit={handleSubmit}>
 
             <Form.Group className="mb-3 form-group">
@@ -182,7 +182,7 @@ export default function Login() {
 //   const navigate = useNavigate();
 
 //   const navigateToSignUp = () => {
-//     navigate('/dashboard')
+//     navigate('/home')
 //   }
 //   const initialFormData = Object.freeze({
 //         email: '',

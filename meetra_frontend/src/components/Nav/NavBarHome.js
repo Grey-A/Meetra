@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import '../../index.css'
 
-function NavBar() {
+function NavBarHome() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="white" variant="white" className='border-bottom sticky-top' >
       <Container fluid>
@@ -19,11 +19,8 @@ function NavBar() {
             <Nav.Link href="#footer" className='nav-links'>Support</Nav.Link>
           </Nav>
           <Nav className='my-auto'>
-            <Nav.Link href='/login'>
-              <button className='btn btn--outline ms-3' >Login</button>
-            </Nav.Link>
-            <Nav.Link href="/signUp">
-              <button className='btn btn--primary ms-3'>  Sign Up </button>
+            <Nav.Link href='/dashboard'>
+              <button className='btn btn--outline ms-3' >Dashboard</button>
             </Nav.Link>    
           </Nav>
         </Navbar.Collapse>
@@ -32,4 +29,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default NavBarHome;
