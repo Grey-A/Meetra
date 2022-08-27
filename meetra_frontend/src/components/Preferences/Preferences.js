@@ -20,12 +20,6 @@ export default function Preferences() {
       <Services />
       <Testimonials />
       <Footer />
-      <Routes>
-        <Route 
-          path='/signUp' 
-          element={<SignUp /> }
-         />
-      </Routes>
     </>
   )
 }

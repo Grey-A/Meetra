@@ -4,7 +4,6 @@ import { Routes, Route } from 'react-router-dom';
 import Preferences from '../Preferences/Preferences';
 import SignUp from '../user-auth/signup';
 import Login from '../user-auth/login';
-import NewMeeting from '../New Meeting/NewMeeting';
 import Home from '../Home/Home';
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
  
   return (
     <div className="wrapper">
-      <NewMeeting />
         <Routes>
           <Route path="*" element={<Preferences />} />
           <Route path="/home" element={<Home />} />          
