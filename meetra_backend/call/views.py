@@ -75,15 +75,14 @@ def GetUserInvites(request, pk):
 
 
 @api_view(["GET"])
-def GenerateToken(request, uid):
+def GenerateToken(request):
     global appId
     global appCertificate
-    exptime = 3600 * 3
+    exptime = 3600 * 50000
     currtime = time.time()
     privilegeExpiredTs = currtime + exptime
     role = 1
-
-    channelName = str(uid)
+    channelName = 'test'
     uid = randint(1, 230)
     token = RtcTokenBuilder.buildTokenWithUid(
         appId,
@@ -94,5 +93,5 @@ def GenerateToken(request, uid):
         privilegeExpiredTs
     )
     if token:
-        return Response(status=status.HTTP_200_OK, data={"token":token})
+        return Response(status=status.HTTP_200_OK, data={"token":token, "usid":uid})
     return Response(status=status.HTTP_400_BAD_REQUEST, data=token.errors)
