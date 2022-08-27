@@ -16,7 +16,6 @@ export default function Login() {
   const errRef = useRef();
   
 
-
   const [email, setEmail] = useState('')
   const [pwd, setPwd] = useState('')
   const [errMsg, setErrMsg] = useState('')
@@ -29,6 +28,8 @@ export default function Login() {
   useEffect(() => {
     setErrMsg('')
   }, [ email, pwd ])
+
+
 
 
 
@@ -45,7 +46,8 @@ export default function Login() {
       console.log(JSON.stringify(response?.data))
       
       // NOTE SAVE THE TOKENS IN LOCALSTORAGE
-      
+
+        localStorage.setItem('accessToken', JSON.stringify(response?.data))
       // AccessToken
       const access = response?.data?.access;
       const refresh = response?.data?.refresh;
