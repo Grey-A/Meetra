@@ -46,8 +46,9 @@ export default function Login() {
       console.log(JSON.stringify(response?.data))
       
       // NOTE SAVE THE TOKENS IN LOCALSTORAGE
+        localStorage.setItem('access', response.data.access)
+        localStorage.setItem('refresh', response.data.refresh)
 
-        localStorage.setItem('accessToken', JSON.stringify(response?.data))
       // AccessToken
       const access = response?.data?.access;
       const refresh = response?.data?.refresh;
