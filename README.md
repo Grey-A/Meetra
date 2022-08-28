@@ -36,7 +36,7 @@ we came to two conclusions regarding this matter, **_`productive meetings arent 
 - Each milestone will have a duration and a total max-time increment in case the milestone took longer to accomplish
 - Our user will provide more detailed information about a milestone e.g. Team's budget allocation, which will be sent to the others involved as a sort of breif, e.g <br/>
 ![Briefs Demo 1](./readme_images/breif1.jpeg)
-![Breifs demo 2](./readme_images/breif2.jpeg)
+![Breifs demo 2](./readme_images/breif2.jpeg)<br/>
 [Cick here to see the PDF](https://drive.google.com/file/d/1ZnK_Cr0izMff75Bt8PoNQ_38iuAvMPOF/view?usp=sharing)
 <br/>
 - Host is able to alter meeting details from his dashboard at any time
@@ -45,6 +45,8 @@ we came to two conclusions regarding this matter, **_`productive meetings arent 
 ---
 - Figma:
       We used this to make our mockup design with the low and high fidelity mockups and a case study, [Here is a link to view it](https://www.figma.com/file/ZU0c6dMLvkyQ1tbGZW0ut3/Meetra?node-id=28%3A565 "Meetra Figma Design")
+- Figjam: 
+      We used this to make our user flowchart, [cick here to view it](https://www.figma.com/file/tX8tDpPKfYcjJbJN5XYEBI/Meetra-Flowchart?node-id=0%3A1)
 - React.js:
       We used this as our Frontend framework.
 - DjangoREST Framework:
