@@ -74,21 +74,21 @@ const Dashboard = () => {
             <span className="toolkit">Home</span>
           </li>
           <li>
-            <Link to="/home">
+            <Link to="#">
               <i className="fas fa-calendar"></i>
               <span className="links_name">Event</span>
             </Link>
             <span className="toolkit">Event</span>
           </li>
           <li>
-            <Link to="/home">
+            <Link to="#">
               <i className="fa fa-bell"></i>
               <span className="links_name">Notification</span>
             </Link>
             <span className="toolkit">Notification</span>
           </li>
           <li>
-            <Link to="/home">
+            <Link to="#">
               <i className="fa fa-gear"></i>
               <span className="links_name">Settings</span>
             </Link>
@@ -110,7 +110,7 @@ const Dashboard = () => {
         <div className="main_content_header">
           <div className="main_title">
             <h1 className="user_profile-title" style={{opacity: '111'}}>
-              Hey  enjoy you meet!
+              Hey, enjoy you meet!
             </h1>
             <h3>You have {data.length} meetings scheduled!</h3>
           </div>
