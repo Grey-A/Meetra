@@ -22,6 +22,8 @@ This is a productivity meeting website that uses the agora SDK with DjangoREST a
 ![Signup](./readme_images/signup.jpeg)
 - Login
 ![Login](./readme_images/login.jpeg)
+- Dashboard
+![Dashboard](./readme_images/dashboard.jpeg)
 
 # How we acheived maximum productivity whilst in a video call
 ---
@@ -55,8 +57,8 @@ we came to two conclusions regarding this matter, **_`productive meetings arent 
       We used this to make a visualization on how our Databases relate with each other, [Here is a link to view it](https://lucid.app/lucidchart/6f61d1d6-71ea-49d5-89d9-e8f7a9c28ace/edit?beaconFlowId=8D64D449961BBA3E&invitationId=inv_421214e3-ce3d-4937-b315-b14649439817&page=0_0# "Meetra Lucid Chart")
 - PostMan:
       We used this to test our Backend API, [Here is a link to the Postman website](https://www.postman.com/ "Postman Website")
-- [Breifs Demo PDF](https://drive.google.com/file/d/1ZnK_Cr0izMff75Bt8PoNQ_38iuAvMPOF/view?usp=sharing)
-- [Case Study PDF](https://drive.google.com/file/d/1x7p-nKpdCJOt3dGtVCkweBBnpU5dhufH/view?usp=sharing)
+- Click [Here](https://drive.google.com/file/d/1ZnK_Cr0izMff75Bt8PoNQ_38iuAvMPOF/view?usp=sharing) to see a pdf sample of our meeting brief
+- Click [Here](https://drive.google.com/file/d/1x7p-nKpdCJOt3dGtVCkweBBnpU5dhufH/view?usp=sharing) to check our general overview case study
 
 # Difficulties we Faced
 ---
