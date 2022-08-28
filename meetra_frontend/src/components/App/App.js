@@ -9,6 +9,8 @@ import NewMeeting from '../New Meeting/NewMeeting';
 import RequireAuth from '../RequireAuth/RequireAuth';
 import { Routes, Route } from 'react-router-dom';
 import NotFound from './NotFound';
+import Dashboard from '../Dashboard/Dashboard';
+// import Call from '../Call/Call';
 
 function App() {
 //  const [token, setToken] = useState();
@@ -16,7 +18,7 @@ function App() {
 //  if(!token) {
 //   return (<Preferences  /> && <Login setToken={setToken} />)
 //  }
- 
+
   return (
     <div className="wrapper">
         <Routes>
@@ -24,7 +26,9 @@ function App() {
             {/* Public Routes */}
             <Route path="/signUp" element={<SignUp />} />          
             <Route path="/login" element={<Login />} />    
-            <Route path="/" element={<Preferences />} />    
+            <Route path="/" element={<Preferences />} />
+            {/* What i was creating */}
+            <Route path="/dashboard" element={<Dashboard />} />  
 
             {/* 404 Not Found */}
             <Route path='/404' element={<NotFound />} /> 
