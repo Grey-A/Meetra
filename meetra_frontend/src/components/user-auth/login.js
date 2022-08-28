@@ -106,7 +106,7 @@ export default function Login() {
           <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive"> {errMsg} </p>
         </div>
 
-            {success ? navigate( from, {replace: true}) : (
+            {success ? navigate('/') : (
           <Form onSubmit={handleSubmit}>
 
             <Form.Group className="mb-3 form-group">
