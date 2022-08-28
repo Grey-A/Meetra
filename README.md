@@ -1,3 +1,4 @@
+![GIF](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/e6288597-c24c-4705-94ba-a551fcc0d8cc.gif?ClientID=vimeo-core-prod&Date=1661726584&Signature=3dd9c5362c038d7168d0a7640b6a3725dd530cd5)
 # Introduction
 ---
 This is a productivity meeting website that uses the agora SDK with DjangoREST as the backend and React.js as the frontend
@@ -12,7 +13,7 @@ This is a productivity meeting website that uses the agora SDK with DjangoREST a
 
 # Project Demo
 ---
-#### Click [here](# "Meetra Demo") to see a quick vimeo video where we use the website and [here](https://www.figma.com/file/ZU0c6dMLvkyQ1tbGZW0ut3/Meetra?node-id=28%3A565) to see the figma design
+#### Click [here](https://vimeo.com/744000819 "Meetra Demo") to see a quick vimeo video where we use the website and [here](https://www.figma.com/file/ZU0c6dMLvkyQ1tbGZW0ut3/Meetra?node-id=28%3A565) to see the figma design
 
 - Header
 ![Homepage](./readme_images/homepage.jpeg)
@@ -24,6 +25,8 @@ This is a productivity meeting website that uses the agora SDK with DjangoREST a
 ![Login](./readme_images/login.jpeg)
 - Dashboard
 ![Dashboard](./readme_images/dashboard.jpeg)
+- Call
+![Call](./readme_images/call.jpeg)
 
 # How we acheived maximum productivity whilst in a video call
 ---
@@ -45,6 +48,7 @@ we came to two conclusions regarding this matter, **_`productive meetings arent 
 
 # Resources
 ---
+- [Here](https://vimeo.com/744000819) is a video demo
 - Figma:
       We used this to make our mockup design with the low and high fidelity mockups and a case study, [Here is a link to view it](https://www.figma.com/file/ZU0c6dMLvkyQ1tbGZW0ut3/Meetra?node-id=28%3A565 "Meetra Figma Design")
 - Figjam: 
