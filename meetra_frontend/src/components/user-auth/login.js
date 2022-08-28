@@ -3,15 +3,12 @@ import useAuth from '../../Hooks/useAuth';
 import Form from 'react-bootstrap/Form';
 import IMG from '../../asset/user7.jpg'
 import axios from './axios';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import PropTypes from 'prop-types'
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export default function Login() {
   const { setAuth } = useAuth()
   const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/"
   const userRef = useRef();
   const errRef = useRef();
   

@@ -1,15 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
 body {
-  position: relative;
-  min-height: 100vh;
   width: 100%;
-  overflow: hidden;
 }
 
 
@@ -871,10 +867,12 @@ border-radius: 0px 7px 7px 0px;
   padding: .3rem .6rem;
   border-radius: 0 2rem 2rem 0;
   transition: all 0.5s ease;
+  opacity: 12;
 }
 
 .sidebar-nav.active{
   width: 13rem;
+  opacity: 14;
 }
 
 .sidebar-nav .logo_content .logo-title {
@@ -962,12 +960,27 @@ border-radius: 0px 7px 7px 0px;
 }
 
 .sidebar-nav ul li a{
+ opacity: 1;
+}
+
+.sidebar-nav.active ul li a{
   color: #fff;
   display: flex;
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
   border-radius: .6rem;
+  opacity: 1;
+}
+
+.sidebar-nav ul li a{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  border-radius: .6rem;
+  opacity: 1;
 }
 
 .sidebar-nav ul li a:hover {
@@ -996,12 +1009,12 @@ border-radius: 0px 7px 7px 0px;
   font-size: 1.2rem;
 }
 
-sidebar-nav .links_name {
+sidebar-nav ul li a .links_name {
   opacity: 0;
   pointer-events: none;
 }
 
-sidebar-nav.active .links_name {
+sidebar-nav.active ul li a .links_name {
   opacity: 1;
   pointer-events: auto;
 }
@@ -1066,6 +1079,7 @@ sidebar-nav.active .links_name {
   bottom: 0;
   left: 0;
   width: 100%;
+  transition: all 0.5s ease;
 }
 
 .dashboard_logout .btn-logout {
@@ -1096,22 +1110,140 @@ sidebar-nav.active .links_name {
 .sidebar-nav.active .dashboard_logout {
   left: -20%;
   text-align: center;
+  transition: all 0.5s ease;
 }
 .main_content {
-  position: absolute;
   height: 100%;
-  width: calc(100% - 13rem);
-  left: 16rem;
-  display: none;
+  width: 100%;
+  margin: 2rem;
+  opacity: 111;
 }
 
-.main_content h2 {
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: #1d1b31;
-  margin: .6rem;
-
+.main_content_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3rem;
 }
+
+.main_title {
+  display: block;
+  font-size: 100%; flex: 1;
+}
+
+.main_content h1{
+ color: #000;
+ font-size: 1.3rem;
+ line-height: 1.6rem;
+ opacity: 1;
+}
+
+.main_content h2{
+ color: #000;
+ font-size: 1.2rem;
+ line-height: 1.6rem;
+}
+
+.main_content h3{
+ color: rgb(78, 73, 73);
+ font-size: 1.1rem;
+ opacity: 1;
+}
+
+.join_meet_btns {
+  display: flex;
+  flex-direction: row;
+  max-height: 3rem;
+}
+
+.join_meet_btns .btn--outline {
+  margin-right: 1rem;
+}
+
+.main_content_body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.dashboard-cards {
+  display: grid;
+  flex-direction: row;
+  max-width: 90%;
+  border: .1rem solid #000;
+  margin: .5rem 1rem 1rem 0;
+  padding: 1rem;
+}
+
+.card_details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: .2rem;
+}
+
+.card_details > div > img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile_name {
+  margin-top: .5rem;
+  margin-left: .5rem;
+}
+
+.profile_name h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  line-height: .8rem;
+}
+
+.profile_name h4 {
+  font-size: 1rem;
+  color: rgb(78, 73, 73);
+}
+
+.card_time {
+  margin-top: .5rem;
+  margin-left: .5rem;
+}
+
+.card_time h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  line-height: .8rem;
+  text-align: right;
+}
+
+.card_time h4 {
+  font-size: 1rem;
+  color: rgb(78, 73, 73);
+}
+
+.card_body {
+  margin-top: 1rem;
+}
+
+.card_body h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  padding-right: 1rem;
+}
+
+.card_body h4 {
+  font-size: 1rem;
+  color: rgb(78, 73, 73);
+}
+
+.card_body span {
+  font-size: 1rem;
+  color: rgb(78, 73, 73);
+  line-height: .9rem;
+}
+
 /* *********** MEDIA QUERIES (MEDIUM DEVICES) *********** */
 @media screen and (max-width: 990px) {
 
@@ -1187,7 +1319,7 @@ sidebar-nav.active .links_name {
   .container-login {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #FFFFFF;
     display: flex;
     flex-direction: column;

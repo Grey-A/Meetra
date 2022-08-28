@@ -5,7 +5,6 @@ import SignUp from '../user-auth/signup';
 import Login from '../user-auth/login';
 import Home from '../Home/Home';
 import Layout from '../Layout/Layout'
-import NewMeeting from '../New Meeting/NewMeeting';
 import RequireAuth from '../RequireAuth/RequireAuth';
 import { Routes, Route } from 'react-router-dom';
 import NotFound from './NotFound';
@@ -28,7 +27,6 @@ function App() {
             <Route path="/login" element={<Login />} />    
             <Route path="/" element={<Preferences />} />
             {/* What i was creating */}
-            <Route path="/dashboard" element={<Dashboard />} />  
 
             {/* 404 Not Found */}
             <Route path='/404' element={<NotFound />} /> 
@@ -37,6 +35,7 @@ function App() {
             <Route element={<RequireAuth />}>
             <Route path="/home" element={<Home />} />
             {/* <Route path='dashboard' element={<Dashboard />} /> */}
+            <Route path="/" element={<Dashboard />} />  
 
             </Route>
           </Route>
