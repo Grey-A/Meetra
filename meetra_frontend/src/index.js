@@ -14,9 +14,7 @@ root.render(
   <StrictMode>
     <BrowserRouter>
       <AuthProvider>
-        <Routes>
-          <Route path='/*' element={<App />} />
-        </Routes>
+        <App />
       </AuthProvider>
     </BrowserRouter>
   </StrictMode>

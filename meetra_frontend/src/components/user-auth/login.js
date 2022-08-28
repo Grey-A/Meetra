@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import useAuth from '../../Hooks/useAuth';
 import Form from 'react-bootstrap/Form';
 import IMG from '../../asset/user7.jpg'
 import axios from './axios';
 import { Link, useNavigate } from 'react-router-dom';
+import AuthContext from '../../Context/AuthProvider';
 
 
 export default function Login() {
-  const { setAuth } = useAuth()
+  const { setAuth } = useContext(AuthContext)
   const navigate = useNavigate();
   const userRef = useRef();
   const errRef = useRef();
@@ -37,10 +38,6 @@ export default function Login() {
       {
         headers: { 'Content-Type': 'application/json' },
      });
-
-      console.log(response?.data);
-      console.log(response?.access);
-      console.log(JSON.stringify(response?.data))
       
       // NOTE SAVE THE TOKENS IN LOCALSTORAGE
         localStorage.setItem('access', response.data.access)
@@ -104,7 +101,7 @@ export default function Login() {
           <p ref={errRef} className={errMsg ? 'errmsg' : 'offscreen'} aria-live="assertive"> {errMsg} </p>
         </div>
 
-            {success ? navigate('/') : (
+            {success ? navigate('/dashboard') : (
           <Form onSubmit={handleSubmit}>
 
             <Form.Group className="mb-3 form-group">

@@ -4,7 +4,6 @@ import Preferences from '../Preferences/Preferences';
 import SignUp from '../user-auth/signup';
 import Login from '../user-auth/login';
 import Home from '../Home/Home';
-import Layout from '../Layout/Layout'
 import RequireAuth from '../RequireAuth/RequireAuth';
 import { Routes, Route } from 'react-router-dom';
 import NotFound from './NotFound';
@@ -21,7 +20,6 @@ function App() {
   return (
     <div className="wrapper">
         <Routes>
-          <Route path="/" element={<Layout />}>
             {/* Public Routes */}
             <Route path="/signUp" element={<SignUp />} />          
             <Route path="/login" element={<Login />} />    
@@ -29,16 +27,11 @@ function App() {
             {/* What i was creating */}
 
             {/* 404 Not Found */}
-            <Route path='/404' element={<NotFound />} /> 
+            <Route path='404' element={<NotFound />} /> 
 
             {/* Private Routes */}
-            <Route element={<RequireAuth />}>
-            <Route path="/home" element={<Home />} />
-            {/* <Route path='dashboard' element={<Dashboard />} /> */}
-            <Route path="/" element={<Dashboard />} />  
-
-            </Route>
-          </Route>
+              <Route path="/dashboard" element={<Dashboard />} />  
+              <Route path="home" element={<Home />} />
         </Routes>
     </div>
   );

@@ -983,6 +983,15 @@ border-radius: 0px 7px 7px 0px;
   opacity: 1;
 }
 
+.sidebar-nav ul li a span{
+
+  opacity: 0;
+}
+
+.sidebar-nav.active ul li a span{
+  opacity: 1;
+}
+
 .sidebar-nav ul li a:hover {
   opacity: 1;
 }
@@ -1015,6 +1024,11 @@ sidebar-nav ul li a .links_name {
 }
 
 sidebar-nav.active ul li a .links_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+sidebar-nav.active ul li a span {
   opacity: 1;
   pointer-events: auto;
 }

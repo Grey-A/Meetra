@@ -45,7 +45,6 @@ const Dashboard = () => {
   let day = new Date().getDay()
   let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
   let daysName = days[day]
-  console.log(daysName);
 
   const [active, setActive] = useState(false);
 
@@ -116,8 +115,8 @@ const Dashboard = () => {
             <h3>You have {data.length} meetings scheduled!</h3>
           </div>
           <div className="join_meet_btns">
-            <button className='btn btn--outline'><i className="fa fa-plus-circle"> </i> Create Meeting</button>
-            <button  className='btn btn--primary'><i className="fa fa-check"> </i> Join Meeting</button>
+            <button className='btn btn--outline'><i className="fa fa-plus"> </i> Create Meeting</button>
+            <button  className='btn btn--primary'>Join Meeting</button>
           </div>
         </div>
         <h2>Upcoming Meeting</h2>
