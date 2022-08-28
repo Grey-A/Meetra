@@ -7,6 +7,7 @@ import Home from '../Home/Home';
 import { Routes, Route } from 'react-router-dom';
 import NotFound from './NotFound';
 import Dashboard from '../Dashboard/Dashboard';
+import Call from '../Call/Call';
 // import Call from '../Call/Call';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
 
             {/* Private Routes */}
               <Route path="/dashboard" element={<Dashboard />} />  
+              <Route path="/call" element={<Call />} />  
               <Route path="home" element={<Home />} />
         </Routes>
     </div>

@@ -116,7 +116,7 @@ const Dashboard = () => {
           </div>
           <div className="join_meet_btns">
             <button className='btn btn--outline'><i className="fa fa-plus"> </i> Create Meeting</button>
-            <button  className='btn btn--primary'>Join Meeting</button>
+            <a href="/call" className='btn btn--primary text-white'>Join Meeting</a>
           </div>
         </div>
         <h2>Upcoming Meeting</h2>
