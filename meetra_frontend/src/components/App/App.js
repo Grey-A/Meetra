@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import Preferences from '../Preferences/Preferences';
 import SignUp from '../user-auth/signup';
 import Login from '../user-auth/login';
 import Home from '../Home/Home';
-import RequireAuth from '../RequireAuth/RequireAuth';
 import { Routes, Route } from 'react-router-dom';
 import NotFound from './NotFound';
 import Dashboard from '../Dashboard/Dashboard';

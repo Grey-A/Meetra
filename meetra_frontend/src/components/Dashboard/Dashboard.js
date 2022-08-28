@@ -55,7 +55,7 @@ const Dashboard = () => {
 
   return (
     <div className='container'>
-      <div className={active == true ? ' active sidebar-nav': 'sidebar-nav'}>
+      <div className={active === true ? ' active sidebar-nav': 'sidebar-nav'}>
 
         <div className="logo_content" style={{opacity: '111'}}>
           <div className="logo-title">
