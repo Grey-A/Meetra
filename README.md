@@ -3,14 +3,6 @@
 ---
 This is a productivity meeting website that uses the agora SDK with DjangoREST as the backend and React.js as the frontend
 
-# Collaborators 
----
-|    Name         |             Role(s)                 |    Discord         |        Email           |     Github     |  
-|-----------------|:-----------------------------------:|:------------------:|:----------------------:|:--------------:|
-| Bello Ango      | Project Manager/ Backend Developer  |  Krøn#7156         | angobello0@gmail.com   |     Grey-A     |
-| Vincent Okereke | Frontend Developer                  | Pythoniclaver#8977 | vincentcode0@gmail.com |  pythoniclaver |
-| Emmanuel Edor   | UI/UX Designer                      |     Maxe#8654      | emmeyboy9@gmail.com    |                |
-
 # Project Demo
 ---
 #### Click [here](https://vimeo.com/744000819 "Meetra Demo") to see a quick vimeo video where we use the website and [here](https://www.figma.com/file/ZU0c6dMLvkyQ1tbGZW0ut3/Meetra?node-id=28%3A565) to see the figma design
@@ -73,6 +65,3 @@ Here are some of the difficulties me and my team faced in this project:
 - **`Integrating the Agora SDK`**: Customizing how our video streams will look like gave us quite a headache that we had to skip it.
 - **`Issues i faced as Project Manager`**: The main problem i faced at first was co-ordinating the team so that we do everything at sync and everyone knows what others ar currently working on but overtime as i got more familiar with my team it became alot easy. 
 
-# #Contact the team
---
-For any enquiries or if you want to contact the team you can do this through the Project manager, **`Bello Ango`**
